@@ -1,0 +1,20 @@
+@font-face {
+  font-family: bergen;
+  src: url('../assets/BergenSans.ttf');
+}
+@font-face {
+  font-family: bergen-bold;
+  src: url('../assets/BergenSans-Bold.ttf');
+}
+
+:root {
+  --light: #f5e4d0;
+  --dark: #28282b;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: bergen;
+}
