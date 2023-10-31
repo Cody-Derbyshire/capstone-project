@@ -10,7 +10,8 @@ const Header = () => {
           borderBottom: '0.1rem solid var(--dark)',
           display: 'flex',
           justifyContent: 'space-between',
-          margin: '0 1rem',
+          margin: '0.5rem 1rem',
+          paddingBottom: '0.5rem',
         }}
         className='navbar'
       >
