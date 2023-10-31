@@ -18,3 +18,15 @@
   color: var(--dark);
   font-family: bergen;
 }
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--dark);
+}

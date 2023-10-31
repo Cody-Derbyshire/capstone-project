@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../css/Header.css';
 
@@ -7,13 +7,15 @@ const Header = () => {
     <>
       <nav
         style={{
-          border: '0.1rem solid var(--dark)',
+          borderBottom: '0.1rem solid var(--dark)',
           display: 'flex',
           justifyContent: 'space-between',
+          margin: '0 1rem',
         }}
+        className='navbar'
       >
-        <Link to={'/home'}>
-          <p>home</p>
+        <Link to={'/'}>
+          <p style={{ fontWeight: 'bold' }}>home</p>
         </Link>
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Link to={'/shop'}>
