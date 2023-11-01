@@ -26,7 +26,7 @@ const Shop = () => {
         />
         <Spline
           className='spline-model'
-          scene='https://prod.spline.design/y3BVmqSdqiVTmDHb/scene.splinecode'
+          scene='https://prod.spline.design/zUrOMBHorzun8hob/scene.splinecode'
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-dark-green)',
@@ -76,7 +76,7 @@ const Shop = () => {
         />
         <Spline
           className='spline-model'
-          scene='https://prod.spline.design/y3BVmqSdqiVTmDHb/scene.splinecode'
+          scene='https://prod.spline.design/FDOprUU7S2muxjha/scene.splinecode'
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-light-green)',
@@ -93,7 +93,7 @@ const Shop = () => {
       >
         <Spline
           className='spline-model'
-          scene='https://prod.spline.design/y3BVmqSdqiVTmDHb/scene.splinecode'
+          scene='https://prod.spline.design/McXzhbD4NOpUCv-O/scene.splinecode'
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-blue-green)',

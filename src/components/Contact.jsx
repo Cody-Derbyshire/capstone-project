@@ -1,9 +1,10 @@
 import '../css/Contact.css';
+import TopBanner from './TopBanner';
 
 const Contact = () => {
   return (
     <>
-      <p>contact</p>
+      <TopBanner content={{ title: 'contact' }} />
     </>
   );
 };

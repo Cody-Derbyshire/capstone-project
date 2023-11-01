@@ -1,9 +1,10 @@
 import '../css/About.css';
+import TopBanner from './TopBanner';
 
 const About = () => {
   return (
     <>
-      <p>about</p>
+      <TopBanner content={{ title: 'about us' }} />
     </>
   );
 };
