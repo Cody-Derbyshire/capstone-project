@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useTime, useTransform } from 'framer-motion';
 
@@ -14,6 +15,15 @@ const Landing = () => {
     [0, 10, 0], // ...move down 10px, then back up 10px
     { clamp: true }
   );
+  const [active, setActive] = useState(false);
+
+  const handleMouseOver = () => {
+    setActive(true);
+  };
+
+  const handleMouseOut = () => {
+    setActive(false);
+  };
 
   return (
     <>
@@ -24,20 +34,35 @@ const Landing = () => {
           flexDirection: 'column',
           justifyContent: 'space-evenly',
           alignItems: 'center',
-          gap: '2rem',
+          gap: '3rem',
         }}
       >
-        <img src={mobileLogo} alt='black garlic logo for mobile view' />
+        <img
+          style={{ paddingTop: '1rem' }}
+          src={mobileLogo}
+          alt='black garlic logo for mobile view'
+        />
 
-        <motion.div
-          animate={{ translateY: 10 }}
-          transition={{ ease: 'anticipate', duration: 1, repeat: Infinity }}
-          whileHover={{ scale: '1.2', transition: { duration: 0.5 } }}
-        >
-          <Link className='down-arrow' to='/shop'>
-            <p style={{ fontSize: '3rem' }}>&darr;</p>
-          </Link>
-        </motion.div>
+        <Link to={'/shop'}>
+          <p
+            className='explore-button'
+            style={{
+              fontSize: '1.2rem',
+              color: active ? 'var(--dark)' : 'var(--light)',
+              backgroundColor: active ? 'var(--light)' : 'var(--dark)',
+              filter: active
+                ? `drop-shadow(.25rem .25rem 0 var(--dark))`
+                : 'none',
+              border: `solid 0.1rem var(--dark)`,
+              padding: '0.25rem 0.5rem',
+              width: 'fit-content',
+            }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+          >
+            get started &rarr;
+          </p>
+        </Link>
       </div>
     </>
   );

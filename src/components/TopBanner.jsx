@@ -1,4 +1,6 @@
 const TopBanner = ({ content }) => {
+  const { title } = content;
+
   return (
     <>
       <h1
@@ -12,7 +14,7 @@ const TopBanner = ({ content }) => {
           fontSize: '2rem',
         }}
       >
-        {content.title}
+        {title}
       </h1>
     </>
   );

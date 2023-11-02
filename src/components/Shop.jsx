@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
 
 import TopBanner from './TopBanner';
@@ -106,6 +105,7 @@ const Shop = () => {
             button: 'explore storage →',
             bgc: 'var(--primary-blue-green)',
             textcol: 'var(--tertiary-orange)',
+            link: '/category',
           }}
         />
       </div>

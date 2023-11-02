@@ -19,6 +19,7 @@
   --secondary-dark-green: #2f4b2699;
   --secondary-blue: #024848cc;
   --secondary-light-green: #97be3c99;
+  --secondary-light-green-solid: #c1d88a;
   --secondary-blue-green: #3a5a4099;
 
   --tertiary-blue: #00ffa9;
@@ -52,4 +53,8 @@ a:visited {
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.bold {
+  font-family: bergen-bold;
 }
