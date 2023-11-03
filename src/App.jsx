@@ -6,6 +6,7 @@ import Shop from './components/Shop.jsx';
 import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
 import Category from './components/Category.jsx';
+import ProductPage from './components/ProductPage.jsx';
 import './css/App.css';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/category' element={<Category />} />
+          <Route path='/category:id' element={<ProductPage />} />
         </Routes>
       </Router>
     </>

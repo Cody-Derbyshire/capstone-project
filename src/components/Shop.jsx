@@ -29,6 +29,7 @@ const Shop = () => {
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-dark-green)',
+            maxWidth: 'calc(50vw - 1rem)',
           }}
         />
       </div>
@@ -45,6 +46,7 @@ const Shop = () => {
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-blue)',
+            maxWidth: 'calc(50vw - 1rem)',
           }}
         />
         <InfoBlock
@@ -79,6 +81,7 @@ const Shop = () => {
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-light-green)',
+            maxWidth: 'calc(50vw - 1rem)',
           }}
         />
       </div>
@@ -96,6 +99,7 @@ const Shop = () => {
           style={{
             aspectRatio: '1/1',
             backgroundColor: 'var(--secondary-blue-green)',
+            maxWidth: 'calc(50vw - 1rem)',
           }}
         />
         <InfoBlock

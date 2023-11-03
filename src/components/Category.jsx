@@ -1,11 +1,41 @@
+import { useState, useEffect } from 'react';
+import LoadingOverlay from 'react-loading-overlay';
 import '../css/Category.css';
 import TopBanner from './TopBanner';
 import ProductCard from './ProductCard';
+/* import Loader from '../assets/loader.gif'; */
 
 const Category = () => {
+  const noraAsh =
+    'https://prod.spline.design/1dBsZmn3pgXl7Hdf/scene.splinecode';
+  const noraWalnut =
+    'https://prod.spline.design/YZAdC92tGORsOyN6/scene.splinecode';
+  const sofiaWalnut =
+    'https://prod.spline.design/iYVsXl8oLTv1GmMF/scene.splinecode';
+  const sofiaAsh =
+    'https://prod.spline.design/AOdryHq2rpcyOyCY/scene.splinecode';
+  const felixAsh =
+    'https://prod.spline.design/ykO30dgi8SAl7xgi/scene.splinecode';
+  const felixWalnut =
+    'https://prod.spline.design/qyBLwlvY9BLQMkmX/scene.splinecode';
+
+  /*  const [isActive, setIsActive] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsActive(false);
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []); */
+
   return (
     <>
       <TopBanner content={{ title: 'storage' }} />
+      {/* <LoadingOverlay
+        active={isActive}
+        spinner={<img src={Loader} style={{ width: '5rem' }} />}
+        text='loading the goods...'
+      > */}
       <div
         style={{
           display: 'grid',
@@ -21,8 +51,7 @@ const Category = () => {
             material: 'Ash',
             bgc: 'var(--primary-dark-green)',
             textcol: 'var(--tertiary-blue)',
-            splineURL:
-              'https://prod.spline.design/zUrOMBHorzun8hob/scene.splinecode',
+            splineURL: noraAsh,
           }}
         />
         <ProductCard
@@ -33,6 +62,8 @@ const Category = () => {
             material: 'Walnut',
             bgc: 'var(--primary-blue-green)',
             textcol: 'var(--tertiary-green)',
+            splineURL: noraWalnut,
+            link: '/category:id',
           }}
         />
         <ProductCard
@@ -43,6 +74,7 @@ const Category = () => {
             material: 'Walnut',
             bgc: 'var(--secondary-blue)',
             textcol: 'var(--tertiary-green)',
+            splineURL: sofiaWalnut,
           }}
         />
         <ProductCard
@@ -53,6 +85,7 @@ const Category = () => {
             material: 'Ash',
             bgc: 'var(--primary-blue)',
             textcol: 'var(--tertiary-pink)',
+            splineURL: sofiaAsh,
           }}
         />
         <ProductCard
@@ -63,6 +96,7 @@ const Category = () => {
             material: 'Ash',
             bgc: 'var(--primary-light-green)',
             textcol: 'var(--primary-blue)',
+            splineURL: felixAsh,
           }}
         />
         <ProductCard
@@ -73,9 +107,11 @@ const Category = () => {
             material: 'Walnut',
             bgc: 'var(--secondary-light-green-solid)',
             textcol: 'var(--primary-blue)',
+            splineURL: felixWalnut,
           }}
         />
       </div>
+      {/* </LoadingOverlay> */}
     </>
   );
 };

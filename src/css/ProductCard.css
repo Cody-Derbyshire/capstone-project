@@ -1,0 +1,27 @@
+.category-button > a:hover {
+  text-decoration: none;
+}
+.category-button > a:visited {
+  text-decoration: none;
+}
+
+._loading_overlay_overlay {
+  background: #f5e4d099 !important;
+  backdrop-filter: blur(20px);
+}
+
+._loading_overlay_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+  background-color: var(--dark);
+  padding: 1rem;
+}
+
+._loading_overlay_spinner svg circle {
+  stroke: var(--light) !important;
+  stroke-width: 0.25rem;
+  stroke-linecap: round;
+}
