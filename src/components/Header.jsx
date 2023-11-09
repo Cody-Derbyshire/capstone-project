@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import '../css/Header.css';
 
@@ -16,17 +17,38 @@ const Header = () => {
         className='navbar'
       >
         <Link to={'/'}>
-          <p style={{ fontWeight: 'bold' }}>home</p>
+          <motion.p
+            whileHover={{ scale: 1.1, textDecoration: 'underline' }}
+            whileTap={{ scale: 0.9 }}
+            style={{ fontWeight: 'bold' }}
+          >
+            home
+          </motion.p>
         </Link>
         <div style={{ display: 'flex', gap: '1rem' }}>
           <Link to={'/shop'}>
-            <p>shop</p>
+            <motion.p
+              whileHover={{ scale: 1.1, textDecoration: 'underline' }}
+              whileTap={{ scale: 0.9 }}
+            >
+              shop
+            </motion.p>
           </Link>
           <Link to={'/about'}>
-            <p>about</p>
+            <motion.p
+              whileHover={{ scale: 1.1, textDecoration: 'underline' }}
+              whileTap={{ scale: 0.9 }}
+            >
+              about
+            </motion.p>
           </Link>
           <Link to={'/contact'}>
-            <p>contact</p>
+            <motion.p
+              whileHover={{ scale: 1.1, textDecoration: 'underline' }}
+              whileTap={{ scale: 0.9 }}
+            >
+              contact
+            </motion.p>
           </Link>
         </div>
       </nav>

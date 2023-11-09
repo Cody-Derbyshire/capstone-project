@@ -1,0 +1,46 @@
+.shop-wrapper {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.shop-row {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.spline {
+  max-width: calc(50vw - 1rem);
+  aspect-ratio: 1/1;
+}
+
+.bg-s-dg {
+  background-color: var(--secondary-dark-green);
+}
+.bg-s-lg {
+  background-color: var(--secondary-light-green);
+}
+.bg-s-bg {
+  background-color: var(--secondary-blue-green);
+}
+.bg-s-b {
+  background-color: var(--secondary-blue);
+}
+
+.bottom-margin {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 45rem) {
+  .spline-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spline {
+    aspect-ratio: unset;
+  }
+}

@@ -27,35 +27,32 @@ const Landing = () => {
 
   return (
     <>
-      <div
-        style={{
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
-          alignItems: 'center',
-          gap: '3rem',
-        }}
-      >
+      <div className='landing-wrapper'>
         <img
-          style={{ paddingTop: '1rem' }}
+          className='landing-image-mobile'
           src={mobileLogo}
+          alt='black garlic logo for mobile view'
+        />
+        <img
+          className='landing-image-tablet'
+          src={tabletLogo}
+          alt='black garlic logo for mobile view'
+        />
+        <img
+          className='landing-image-web'
+          src={webLogo}
           alt='black garlic logo for mobile view'
         />
 
         <Link to={'/shop'}>
           <p
-            className='explore-button'
+            className='landing-explore-button'
             style={{
-              fontSize: '1.2rem',
               color: active ? 'var(--dark)' : 'var(--light)',
               backgroundColor: active ? 'var(--light)' : 'var(--dark)',
               filter: active
                 ? `drop-shadow(.25rem .25rem 0 var(--dark))`
                 : 'none',
-              border: `solid 0.1rem var(--dark)`,
-              padding: '0.25rem 0.5rem',
-              width: 'fit-content',
             }}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}

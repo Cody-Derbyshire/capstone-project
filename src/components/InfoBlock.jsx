@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/InfoBlock.css';
+import { motion } from 'framer-motion';
 
 const InfoBlock = ({ content }) => {
   const { bgc, textcol, link, info, button, title } = content;
 
-  const [active, setActive] = useState(false);
+  /*  const [active, setActive] = useState(false);
 
   const handleMouseOver = () => {
     setActive(true);
@@ -13,51 +14,46 @@ const InfoBlock = ({ content }) => {
 
   const handleMouseOut = () => {
     setActive(false);
-  };
+  }; */
   return (
     <>
       <div
+        className='info-wrapper'
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
-          padding: '1rem',
-          aspectRatio: '1/1',
           backgroundColor: bgc,
         }}
       >
         <div
+          className='info-text'
           style={{
             color: textcol,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
           }}
         >
-          <p style={{ fontFamily: 'bergen-bold', fontSize: '1.25rem' }}>
-            {title}
-          </p>
-          <p style={{ fontSize: '0.6rem' }}>{info}</p>
+          <p className='info-title'>{title}</p>
+          <p className='info-desc'>{info}</p>
         </div>
         <Link to={link}>
-          <p
-            className='explore-button'
+          <motion.p
+            className='shop-explore-button'
             style={{
-              fontSize: '0.8rem',
-              color: active ? textcol : bgc,
-              backgroundColor: active ? bgc : textcol,
-              filter: active
-                ? `drop-shadow(.15rem .15rem 0 ${textcol})`
-                : 'none',
+              color: bgc,
+              backgroundColor: textcol,
+              filter: 'none',
               border: `solid 0.1rem ${textcol}`,
-              padding: '0 0.25rem',
-              width: 'fit-content',
             }}
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
+            /* onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut} */
+            whileHover={{
+              color: textcol,
+              backgroundColor: bgc,
+              filter: `drop-shadow(.25rem .25rem 0 ${textcol})`,
+              border: `solid 0.1rem ${textcol}`,
+              scale: 1.01,
+            }}
+            whileTap={{ scale: 0.9 }}
           >
             {button}
-          </p>
+          </motion.p>
         </Link>
       </div>
     </>
