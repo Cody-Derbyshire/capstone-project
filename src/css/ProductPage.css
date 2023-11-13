@@ -105,4 +105,8 @@ a:hover.back-btn {
   .product-info-wrapper {
     font-size: 1.25rem;
   }
+
+  .product-spline-model {
+    max-width: 80vw;
+  }
 }
