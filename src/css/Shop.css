@@ -9,6 +9,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.shop-row-flipped {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .spline {
   max-width: calc(50vw - 1rem);
   aspect-ratio: 1/1;
@@ -35,12 +41,39 @@
   .spline-wrapper {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
   }
 
   .spline {
     aspect-ratio: unset;
+    height: 80% !important;
+  }
+
+  .shop-row {
+    grid-template-columns: 1.8fr 1fr;
+  }
+
+  .shop-row-flipped {
+    grid-template-columns: 1fr 1.8fr;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .shop-row,
+  .shop-row-flipped {
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+  }
+  .spline {
+    height: 80% !important;
+  }
+  .shop-wrapper {
+    display: flex;
+    margin: 0 1rem;
+  }
+  .shop-left,
+  .shop-right {
+    width: 50vw;
   }
 }

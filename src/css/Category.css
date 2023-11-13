@@ -10,3 +10,9 @@
 .category-wrapper:nth-last-child(-n + 2) {
   margin-bottom: 1rem;
 }
+
+@media screen and (min-width: 90rem) {
+  .category-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

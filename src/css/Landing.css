@@ -39,6 +39,27 @@
 
   .landing-image-tablet {
     display: flex;
-    padding-top: 1rem;
+    padding-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .landing-image-mobile,
+  .landing-image-tablet {
+    display: none;
+  }
+  .landing-image-web {
+    margin-top: 5rem;
+    display: flex;
+    width: 80vw;
+    align-self: flex-start;
+  }
+
+  .landing-wrapper {
+    gap: 5rem;
+    align-items: end;
+  }
+  .landing-explore-button {
+    margin-right: 10rem;
   }
 }

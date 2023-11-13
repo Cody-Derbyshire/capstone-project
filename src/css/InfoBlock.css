@@ -44,7 +44,7 @@ p:active {
 
 @media screen and (min-width: 45rem) {
   .info-wrapper {
-    aspect-ratio: 1.5/1;
+    aspect-ratio: 2/1;
     padding: 1.5rem;
   }
 
@@ -58,5 +58,11 @@ p:active {
 
   .shop-explore-button {
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .info-wrapper {
+    aspect-ratio: 1/1;
   }
 }

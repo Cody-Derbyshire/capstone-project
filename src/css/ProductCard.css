@@ -50,3 +50,10 @@
     font-size: 1rem;
   }
 }
+
+@media screen and (min-width: 90rem) {
+  .category-spline {
+    height: 79% !important;
+    aspect-ratio: unset;
+  }
+}

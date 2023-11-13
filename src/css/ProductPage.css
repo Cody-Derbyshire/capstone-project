@@ -110,3 +110,15 @@ a:hover.back-btn {
     max-width: 80vw;
   }
 }
+
+@media screen and (min-width: 90rem) {
+  .web-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-info-wrapper {
+    justify-content: end;
+    border-top: none;
+  }
+}
