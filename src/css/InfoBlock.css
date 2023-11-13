@@ -1,7 +1,17 @@
 a,
-a:hover {
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent !important;
 }
+/* p,
+p:hover,
+p:focus,
+p:active {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent !important;
+} */
 
 .info-wrapper {
   display: flex;

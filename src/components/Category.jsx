@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react';
-import LoadingOverlay from 'react-loading-overlay';
 import '../css/Category.css';
 import TopBanner from './TopBanner';
 import ProductCard from './ProductCard';
-/* import Loader from '../assets/loader.gif'; */
 
 const Category = () => {
   const noraAsh =
@@ -19,30 +16,11 @@ const Category = () => {
   const felixWalnut =
     'https://prod.spline.design/qyBLwlvY9BLQMkmX/scene.splinecode';
 
-  /*  const [isActive, setIsActive] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsActive(false);
-    }, 8000);
-    return () => clearTimeout(timer);
-  }, []); */
-
   return (
     <>
       <TopBanner content={{ title: 'storage' }} />
-      {/* <LoadingOverlay
-        active={isActive}
-        spinner={<img src={Loader} style={{ width: '5rem' }} />}
-        text='loading the goods...'
-      > */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          padding: '0 1rem',
-        }}
-      >
+
+      <div className='category-wrapper'>
         <ProductCard
           content={{
             name: 'Nora',
@@ -100,6 +78,7 @@ const Category = () => {
           }}
         />
         <ProductCard
+          className='bottom-margin'
           content={{
             name: 'Felix',
             desc: 'Record Stand',
@@ -111,7 +90,6 @@ const Category = () => {
           }}
         />
       </div>
-      {/* </LoadingOverlay> */}
     </>
   );
 };

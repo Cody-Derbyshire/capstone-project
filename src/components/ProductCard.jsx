@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import '../css/ProductCard.css';
 
@@ -8,78 +9,41 @@ const ProductCard = ({ content }) => {
   const { material, name, price, desc, bgc, textcol, splineURL, link } =
     content;
 
-  const [active, setActive] = useState(false);
-
-  const handleMouseOver = () => {
-    setActive(true);
-  };
-  const handleClick = () => {
-    setActive(true);
-    const timer = setTimeout(() => {
-      setActive(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  };
-
-  const handleMouseOut = () => {
-    setActive(false);
-  };
-
   return (
     <>
       <div style={{ backgroundColor: bgc }}>
-        <Spline
-          className='spline-model'
-          scene={splineURL}
-          style={{
-            aspectRatio: '1/1',
-            height: 'unset',
-            display: 'flex',
-            maxWidth: 'calc(50vw - 1rem)',
-          }}
-        />
-        <div
-          style={{
-            padding: '0.5rem 1rem',
-          }}
-        >
-          <p style={{ textAlign: 'right', color: textcol, fontSize: '0.6rem' }}>
+        <Spline className='category-spline' scene={splineURL} />
+        <div className='category-info'>
+          <p className='material' style={{ color: textcol }}>
             {material}
           </p>
           <div style={{ borderTop: `0.1rem solid ${textcol}` }}>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                fontSize: '0.8rem',
-                color: textcol,
-              }}
-              className='bold'
-            >
+            <div style={{ color: textcol }} className='bold name-price'>
               <p>{name}</p>
               <p>${price}</p>
             </div>
             <Link to={link}>
-              <div
+              <motion.div
+                className='category-link-btn'
                 style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  fontSize: '0.6rem',
-                  color: active ? textcol : bgc,
-                  backgroundColor: active ? bgc : textcol,
-                  filter: active
-                    ? `drop-shadow(.15rem .15rem 0 ${textcol})`
-                    : 'none',
+                  color: bgc,
+                  backgroundColor: textcol,
+                  filter: 'none',
                   border: `solid 0.1rem ${textcol}`,
-                  padding: '0 0.25rem',
                 }}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-                onClick={handleClick}
+                whileHover={{
+                  color: textcol,
+                  backgroundColor: bgc,
+                  filter: `drop-shadow(.15rem .15rem 0 ${textcol})`,
+                  scale: 1.01,
+                }}
+                whileTap={{
+                  scale: 0.99,
+                }}
               >
                 <p>{desc}</p>
                 <p>&rarr;</p>
-              </div>
+              </motion.div>
             </Link>
           </div>
         </div>

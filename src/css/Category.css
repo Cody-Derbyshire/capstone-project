@@ -1,0 +1,12 @@
+.category-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 1rem;
+}
+.bottom-margin {
+  margin-bottom: 1rem;
+}
+
+.category-wrapper:nth-last-child(-n + 2) {
+  margin-bottom: 1rem;
+}

@@ -5,23 +5,48 @@
   text-decoration: none;
 }
 
-._loading_overlay_overlay {
-  background: #f5e4d099 !important;
-  backdrop-filter: blur(20px);
-}
-
-._loading_overlay_content {
+.category-spline {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--light);
-  background-color: var(--dark);
-  padding: 1rem;
+  max-width: calc(50vw - 1rem);
+  height: unset !important;
+  aspect-ratio: 1/1;
 }
 
-._loading_overlay_spinner svg circle {
-  stroke: var(--light) !important;
-  stroke-width: 0.25rem;
-  stroke-linecap: round;
+.category-info {
+  padding: 0.5rem 1rem;
+}
+
+.material {
+  text-align: right;
+  font-size: 0.6rem;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+.category-link-btn {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  padding: 0 0.25rem;
+}
+
+@media screen and (min-width: 45rem) {
+  .category-spline {
+    height: 80% !important;
+  }
+
+  .material {
+    font-size: 1rem;
+  }
+
+  .name-price {
+    font-size: 1.2rem;
+  }
+
+  .category-link-btn {
+    font-size: 1rem;
+  }
 }

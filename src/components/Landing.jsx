@@ -8,22 +8,8 @@ import tabletLogo from '../assets/bg-branding-svg-tablet.svg';
 import webLogo from '../assets/bg-branding-svg-web.svg';
 
 const Landing = () => {
-  const time = useTime();
-  const translateY = useTransform(
-    time,
-    [0, 1000, 2000], // For every 4 seconds...
-    [0, 10, 0], // ...move down 10px, then back up 10px
-    { clamp: true }
-  );
-  const [active, setActive] = useState(false);
-
-  const handleMouseOver = () => {
-    setActive(true);
-  };
-
-  const handleMouseOut = () => {
-    setActive(false);
-  };
+  const bgc = 'var(--light)';
+  const textcol = 'var(--dark)';
 
   return (
     <>
@@ -45,20 +31,25 @@ const Landing = () => {
         />
 
         <Link to={'/shop'}>
-          <p
+          <motion.p
             className='landing-explore-button'
             style={{
-              color: active ? 'var(--dark)' : 'var(--light)',
-              backgroundColor: active ? 'var(--light)' : 'var(--dark)',
-              filter: active
-                ? `drop-shadow(.25rem .25rem 0 var(--dark))`
-                : 'none',
+              color: bgc,
+              backgroundColor: textcol,
+              filter: 'none',
+              border: `solid 0.1rem ${textcol}`,
             }}
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
+            whileHover={{
+              color: textcol,
+              backgroundColor: bgc,
+              filter: `drop-shadow(.25rem .25rem 0 ${textcol})`,
+              border: `solid 0.1rem ${textcol}`,
+              scale: 1.01,
+            }}
+            whileTap={{ scale: 0.9 }}
           >
             get started &rarr;
-          </p>
+          </motion.p>
         </Link>
       </div>
     </>

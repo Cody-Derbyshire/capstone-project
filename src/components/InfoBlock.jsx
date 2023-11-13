@@ -41,8 +41,6 @@ const InfoBlock = ({ content }) => {
               filter: 'none',
               border: `solid 0.1rem ${textcol}`,
             }}
-            /* onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut} */
             whileHover={{
               color: textcol,
               backgroundColor: bgc,
