@@ -1,10 +1,13 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import '../css/Contact.css';
 import TopBanner from './TopBanner';
 
 const Contact = () => {
+  const navigate = useNavigate();
   function ContactForm() {
     const [state, handleSubmit] = useForm('mnqkyjvk');
     if (state.succeeded) {
@@ -79,6 +82,21 @@ const Contact = () => {
   return (
     <>
       <TopBanner content={{ title: 'contact' }} />
+      <div className='back-btn-wrapper'>
+        <motion.a
+          onClick={() => navigate(-1)}
+          className='back-btn'
+          whileHover={{
+            scale: 1.05,
+            textDecoration: 'underline',
+          }}
+          whileTap={{
+            scale: 0.9,
+          }}
+        >
+          &larr; back
+        </motion.a>
+      </div>
       <div className='contact-wrapper'>
         <ContactForm />
       </div>

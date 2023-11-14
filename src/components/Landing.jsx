@@ -22,12 +22,12 @@ const Landing = () => {
         <img
           className='landing-image-tablet'
           src={tabletLogo}
-          alt='black garlic logo for mobile view'
+          alt='black garlic logo for tablet view'
         />
         <img
           className='landing-image-web'
           src={webLogo}
-          alt='black garlic logo for mobile view'
+          alt='black garlic logo for web view'
         />
 
         <Link to={'/shop'}>
