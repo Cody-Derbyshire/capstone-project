@@ -7,6 +7,14 @@
   src: url('../assets/BergenSans-Bold.ttf');
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+}
+
 :root {
   --light: #f5e4d0;
   --dark: #28282b;
