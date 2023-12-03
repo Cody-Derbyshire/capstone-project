@@ -29,11 +29,11 @@
 .category-link-btn {
   display: flex;
   justify-content: space-between;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   padding: 0 0.25rem;
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 40rem) {
   .category-spline {
     height: 80% !important;
   }
@@ -51,7 +51,7 @@
   }
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .category-spline {
     height: 79% !important;
     aspect-ratio: unset;

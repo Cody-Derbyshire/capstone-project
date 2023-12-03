@@ -42,7 +42,7 @@ p:active {
   width: fit-content;
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 40rem) {
   .info-wrapper {
     aspect-ratio: 2/1;
     padding: 1.5rem;
@@ -61,7 +61,7 @@ p:active {
   }
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .info-wrapper {
     aspect-ratio: 1/1;
   }

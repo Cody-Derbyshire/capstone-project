@@ -19,6 +19,7 @@
   font-size: 1.2rem;
   border: solid 0.1rem var(--dark);
   padding: 0.25rem 0.5rem;
+  margin-bottom: 2rem;
   width: fit-content;
 }
 
@@ -27,7 +28,7 @@
   display: none;
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 40rem) {
   .landing-wrapper {
     gap: 10rem;
   }
@@ -43,7 +44,7 @@
   }
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .landing-image-mobile,
   .landing-image-tablet {
     display: none;

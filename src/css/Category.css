@@ -11,7 +11,7 @@
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .category-wrapper {
     grid-template-columns: repeat(3, 1fr);
   }

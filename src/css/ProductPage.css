@@ -89,7 +89,7 @@ a:hover.back-btn {
   background-color: var(--light);
 }
 
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 40rem) {
   .back-btn {
     font-size: 1.5rem;
   }
@@ -111,7 +111,7 @@ a:hover.back-btn {
   }
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .web-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

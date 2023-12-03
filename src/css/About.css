@@ -95,7 +95,7 @@ h2 {
   gap: 1rem;
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .about-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

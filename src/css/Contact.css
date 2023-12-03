@@ -64,12 +64,12 @@ input:focus {
   font-size: 1.5rem;
   width: 100%;
 }
-@media screen and (min-width: 45rem) {
+@media screen and (min-width: 40rem) {
   .form-wrapper {
     width: 50vw;
   }
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 70rem) {
   .form-wrapper {
     width: 30vw;
   }
